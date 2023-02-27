@@ -1,0 +1,125 @@
+# depslib dependency file v1.0
+1668284968 source:/home7/em963948/Desktop/SI/TestsTextures/textures/jpegtex.cpp
+	<cstdio>
+	<cstdlib>
+	<GL/freeglut.h>
+	<jpeglib.h>
+	<jerror.h>
+	<iostream>
+	<cmath>
+	"Sphere.h"
+	"bras.h"
+	"jambe.h"
+
+1668154752 /home7/em963948/Desktop/SI/TestsTextures/textures/sphere.h
+	"point.h"
+
+1668284428 /home7/em963948/Desktop/SI/TestsTextures/textures/point.h
+
+1668161217 source:/home7/em963948/Desktop/SI/TestsTextures/textures/sphere.cpp
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<cstdlib>
+	<iostream>
+	"point.h"
+	"sphere.h"
+	<math.h>
+	"Texture.h"
+
+1668154832 /home7/em963948/Desktop/SI/TestsTextures/textures/jpegtex.cpp
+	<cstdio>
+	<cstdlib>
+	<GL/freeglut.h>
+	<jpeglib.h>
+	<jerror.h>
+	<iostream>
+	<cmath>
+	"sphere.h"
+
+1668165789 source:/home7/em963948/Desktop/SI/TestsTextures/textures/Texture.cpp
+	"Texture.h"
+
+1668285460 /home7/em963948/Desktop/SI/TestsTextures/textures/Texture.h
+	<cstdio>
+	<cstdlib>
+	<GL/freeglut.h>
+	<jpeglib.h>
+	<jerror.h>
+	<iostream>
+	<cmath>
+
+1668285629 source:/home7/em963948/Desktop/SI/TestsTextures/textures/Sphere.cpp
+	"Sphere.h"
+
+1668285637 /home7/em963948/Desktop/SI/TestsTextures/textures/Sphere.h
+	<cstdio>
+	<cstdlib>
+	<GL/freeglut.h>
+	<jpeglib.h>
+	<jerror.h>
+	<iostream>
+	<cmath>
+	"Texture.h"
+	"point.h"
+	"Normal.h"
+
+1668285547 source:/home7/em963948/Desktop/SI/TestsTextures/textures/bras.cpp
+	"bras.h"
+
+1668285581 /home7/em963948/Desktop/SI/TestsTextures/textures/cylindre.h
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<cstdlib>
+	"point.h"
+	<math.h>
+	"Normal.h"
+
+1668285667 /home7/em963948/Desktop/SI/TestsTextures/textures/tetraedre.h
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<cstdlib>
+	<iostream>
+	"point.h"
+	<math.h>
+	"Normal.h"
+
+1668285593 source:/home7/em963948/Desktop/SI/TestsTextures/textures/jambe.cpp
+	"jambe.h"
+
+1668285596 /home7/em963948/Desktop/SI/TestsTextures/textures/jambe.h
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<cstdlib>
+	<iostream>
+	"cylindre.h"
+	"point.h"
+	"tetraedre.h"
+	"Sphere.h"
+	<math.h>
+
+1668285657 source:/home7/em963948/Desktop/SI/TestsTextures/textures/tetraedre.cpp
+	"tetraedre.h"
+
+1668285571 source:/home7/em963948/Desktop/SI/TestsTextures/textures/cylindre.cpp
+	"cylindre.h"
+
+1668285518 /home7/em963948/Desktop/SI/TestsTextures/textures/bras.h
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<cstdlib>
+	<iostream>
+	"cylindre.h"
+	"point.h"
+	"tetraedre.h"
+	"Sphere.h"
+	<math.h>
+
+1668250420 source:/home7/em963948/Desktop/SI/TestsTextures/textures/Normal.cpp
+	"Normal.h"
+
+1668284395 /home7/em963948/Desktop/SI/TestsTextures/textures/Normal.h
+	<GLUT/glut.h>
+	<GL/glut.h>
+	"point.h"
+	<math.h>
+

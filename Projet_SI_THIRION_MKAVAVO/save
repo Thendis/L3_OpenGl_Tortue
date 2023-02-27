@@ -1,0 +1,97 @@
+/**
+* Creat every point of a sphere object and place them in p
+* @param nm Number of meridian points
+* @param np Number of prallel points
+* @param r Length of ray
+* @param p Where the points will be filled
+*/
+void initSphereCoord( unsigned int nm, unsigned int np, double r, Point p[])
+{
+    float red=1,green=1,blue=1;
+    for(int i=0;i<np;i++)
+    {
+        double phi = (M_PI/2) + (i*(M_PI/(np-1)));
+        for(int j=0;j<nm+1;j++)
+        {
+            int indice = (i*nm)+j;
+            double theta = (j*(M_PI)/(nm-1));
+
+            p[indice] = {r*cos(theta)*cos(phi),
+                                r*sin(theta)*cos(phi),
+                                r*sin(phi),
+                                red,
+                                green,
+                                blue};
+        }
+    }
+}
+/**
+* Link faces with there points(GL_POLYGONE) Used for creat en draw sphere
+* @todo Verifier si tourne bien dans sens trigo
+* @author Eddin
+*/
+void initFaceSphere(const Point points[], int faces[][4], const int steps, const int nbPointsMeridian)
+{
+
+    for(int e = 0; e<steps-1;e++)
+    {
+        for(int i =e*nbPointsMeridian;i<nbPointsMeridian*(e+1);i++)
+        {
+            faces[i][0] = i;
+            faces[i][1] = i+nbPointsMeridian;
+            faces[i][2] = i+1+nbPointsMeridian;
+            faces[i][3] = i+1;
+        }
+    }
+}
+
+/**
+* Draw the fig based on an array au Points and the faces linked with
+* @param p Array of points
+* @param f Array of faces (every faces contains index of 4 Points)
+* @param nbFaces Number of face wich should be drawn
+*/
+void drawSphere(const Point p[], const int f[][4], const int nm, const int np, Texture t)
+{
+    int nbFaces = nm*(np-1);
+    for(int i = 0;i<nbFaces;i++)
+    {
+        const int* face = f[i];
+        glBegin(GL_POLYGON);
+        float *tex;
+        tex = t.getTexCoords(i,(float)np,(float)nm);
+            glTexCoord2f(tex[0],tex[2]);
+            glVertex3d(p[face[0]].x,p[face[0]].y,p[face[0]].z);
+
+            glTexCoord2f(tex[0],tex[3]);
+            glVertex3d(p[face[1]].x,p[face[1]].y,p[face[1]].z);
+
+            glTexCoord2f(tex[1],tex[3]);
+            glVertex3d(p[face[2]].x,p[face[2]].y,p[face[2]].z);
+
+            glTexCoord2f(tex[1],tex[2]);
+            glVertex3d(p[face[3]].x,p[face[3]].y,p[face[3]].z);
+        glEnd();
+    }
+}
+
+
+/**
+* Draw every Points in the p array
+* @param p Array of Points
+* @param length Length of p
+*/
+void showPoints(Point p[], int length)
+{
+    glPointSize(6);
+    glBegin(GL_POINTS);
+    for(int i=0;i<length;i++)
+    {
+        Point point = p[i];
+        glColor3f(point.r,point.g,point.b);
+        glVertex3d(point.x,point.y,point.z);
+    }
+
+    glEnd();
+
+}
